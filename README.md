@@ -3,11 +3,18 @@
  Create a chatbot using an LLM (e.g., PaLM 2 or other GCP-hosted LLM) and deploy it as an API on GCP
 
 ## Architecture Diagram
-User --> (Frontend: Cloud Run/Streamlit) --> (Backend: Cloud Run/FastAPI) --> Vertex AI/OpenAI (Secrets: Secret Manager, Logs: Cloud Logging, Monitoring: Cloud Monitoring)
+```mermaid
+graph LR
+    newLines[["`Secrets: Secret Manager
+Logs: Cloud Logging
+Monitoring: Cloud Monitoring`"]]
+    id1([User])-->id2(Frontend: CloudRun/Streamlit)--> id3(Backend: CloudRun/FastAPI)-->id4(Vertex AI/OpenAI)-->newLines;
+```
 
 ## Respository Struture
-simple-chatbot-gcp/
-|-- backend/
+```
+simple-chatbot-gcp/    
+|-- backend/    
 |   |-- main.py
 |   |-- requirement.txt
 |   |-- Dockerfile
@@ -15,6 +22,7 @@ simple-chatbot-gcp/
 |   |-- frontend.py
 |   |-- Dockerfile
 |-- README.md
+```
 
 ## Testing
 ### Test the API:

@@ -1,0 +1,8 @@
+fastapi  
+uvicorn  
+google-cloud-aiplatform  # For Vertex AI  
+openai                   # For OpenAI  
+python-dotenv  
+google-cloud-secret-manager  
+google-generativeai      # For google generative ai
+grpcio==1.67.1
